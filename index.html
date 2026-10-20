@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krilo Seguridad Industrial | Equipo de protección personal en Reynosa (propuesta)</title>
+<meta name="description" content="Equipo de protección personal y seguridad industrial en Reynosa: protección de altura, cabeza, facial, calzado, antiestático y vialidad. Mayoreo, menudeo y envío local sin costo.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* Idea: el comprador de una planta no compra un producto, arma un pedido. La página es un catálogo con lista de cotización. */
+:root{
+  --red:#C8102E;        /* rojo del logo */
+  --red-dark:#9E0C24;
+  --black:#1C1C1C;
+  --hazard:#FFC20E;     /* amarillo de seguridad, solo franjas y detalles */
+  --grey:#F3F3F1;
+  --white:#FFFFFF;
+  --muted:#575757;
+  --line:#DEDEDB;
+  --wa:#0B6E39;
+  --r:8px;
+  --cond:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;
+  --sans:"IBM Plex Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--white);color:var(--black);font-family:var(--sans);font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:var(--red)}
+:focus-visible{outline:3px solid var(--hazard);outline-offset:2px}
+h1,h2,h3{font-family:var(--cond);line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:16px;padding-right:16px}
+.hazard{height:10px;background:repeating-linear-gradient(-45deg,var(--hazard) 0 14px,var(--black) 14px 28px)}
+
+.proposal{background:var(--black);color:#fff;font-size:14px}
+.proposal .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.proposal button{background:var(--hazard);color:var(--black);border:0;border-radius:6px;padding:6px 12px;font:inherit;font-weight:600;cursor:pointer}
+
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:18px;min-height:72px}
+.brand{flex:none}
+.brand img{height:46px;width:auto}
+nav.main{display:flex;gap:2px;margin-left:auto}
+nav.main a{text-decoration:none;color:var(--black);font-weight:500;font-size:16px;padding:8px 10px;border-radius:6px}
+nav.main a:hover{background:var(--grey)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 18px;border-radius:var(--r);font:inherit;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.2;text-align:center}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#085A2E}
+.btn-line{border-color:var(--black);color:var(--black);background:var(--white)}
+.btn-line:hover{background:var(--black);color:#fff}
+.btn-light{border-color:#fff;color:#fff}
+.btn-light:hover{background:#fff;color:var(--black)}
+.call-top{flex:none}
+
+/* Portada */
+.hero{background:var(--black);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:56px}
+.hero h1{color:#fff;font-size:clamp(40px,6vw,76px);font-weight:700;text-transform:uppercase;letter-spacing:.01em}
+.hero p.lead{color:#D6D6D6;font-size:19px;max-width:32em;margin:18px 0 26px}
+.hero .ctas{display:flex;gap:10px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:1fr;gap:10px}
+.stats div{display:flex;align-items:baseline;gap:14px;border-left:4px solid var(--hazard);padding:6px 0 6px 16px}
+.stats b{font-family:var(--cond);font-size:46px;line-height:1;font-variant-numeric:tabular-nums}
+.stats span{color:#D6D6D6}
+.sectors{background:var(--red);color:#fff}
+.sectors .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;padding-top:14px;padding-bottom:14px;font-weight:600}
+.sectors b{font-family:var(--cond);font-size:18px;text-transform:uppercase;letter-spacing:.04em}
+
+section.block{padding:64px 0}
+section.alt{background:var(--grey)}
+.sec-head{display:grid;gap:8px;margin-bottom:24px;max-width:720px}
+.sec-head h2{font-size:clamp(32px,4.4vw,52px);font-weight:700;text-transform:uppercase}
+.sec-head p{color:var(--muted);font-size:18px}
+
+/* Categorías por zona del cuerpo */
+.zones{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.zones button{display:grid;justify-items:center;gap:8px;padding:18px 10px;border:2px solid var(--line);border-radius:var(--r);background:var(--white);font:inherit;cursor:pointer;color:var(--black);text-align:center}
+.zones button:hover{border-color:var(--black)}
+.zones button[aria-pressed="true"]{border-color:var(--red);background:#FCEFF1}
+.zones svg{width:44px;height:44px}
+.zones b{font-family:var(--cond);font-size:19px;line-height:1.1}
+.zones span{font-size:14px;color:var(--muted)}
+
+/* Productos */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 14px}
+.bar p{color:var(--muted)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.prod{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.prod .ph{aspect-ratio:1;background:var(--white);display:grid;place-items:center;padding:12px;border-bottom:1px solid var(--line)}
+.prod .ph img{max-height:100%;width:auto;object-fit:contain}
+.prod .in{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.prod .cat{font-size:13px;font-weight:600;color:var(--red);text-transform:uppercase;letter-spacing:.04em}
+.prod h3{font-family:var(--sans);font-size:16px;font-weight:600;line-height:1.3}
+.prod .sku{font-size:14px;color:var(--muted)}
+.prod .add{margin-top:auto;padding-top:8px}
+.prod .add .btn{width:100%;min-height:42px;font-size:15px}
+.prod .add .btn[aria-pressed="true"]{background:var(--black);border-color:var(--black)}
+.more{margin-top:18px;color:var(--muted)}
+
+/* Cómo comprar */
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.how div{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:6px;align-content:start}
+.how b{font-family:var(--cond);font-size:22px}
+.how span{color:var(--muted);font-size:16px}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact dl{margin:0;display:grid;gap:14px}
+.contact dt{font-size:14px;color:var(--muted)}
+.contact dd{margin:0;font-size:19px;overflow-wrap:anywhere}
+.contact dd a{font-weight:600}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:2px 14px}
+.special{background:var(--black);color:#fff;border-radius:var(--r);padding:26px;display:grid;gap:12px}
+.special h3{font-size:28px;color:#fff;text-transform:uppercase}
+.special p{color:#D6D6D6}
+
+footer{background:var(--black);color:#BDBDBD;padding:28px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#fff}
+
+/* Barra y panel de cotización */
+.qbar{position:fixed;left:16px;right:16px;bottom:16px;z-index:30;max-width:560px;margin:0 auto;background:var(--black);color:#fff;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,.35);display:flex;align-items:center;gap:12px;padding:10px 10px 10px 18px;transform:translateY(160%);transition:transform .3s ease}
+.qbar.show{transform:none}
+.qbar .count{flex:1;min-width:0;font-weight:600}
+.qbar .count b{color:var(--hazard);font-size:20px}
+dialog{border:0;padding:0;border-radius:12px;width:min(560px,calc(100vw - 32px));max-height:calc(100vh - 32px);color:var(--black)}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+.dh{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--white);z-index:1}
+.dh h2{font-size:26px;text-transform:uppercase}
+.x{background:none;border:0;font-size:28px;line-height:1;cursor:pointer;width:44px;height:44px;color:var(--black)}
+.db{padding:16px 20px 22px}
+.qlist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.qlist li{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:var(--r);padding:8px}
+.qlist img{width:52px;height:52px;object-fit:contain}
+.qlist .nm{font-size:15px;font-weight:600;line-height:1.3}
+.qty{display:flex;align-items:center;gap:4px}
+.qty button{width:34px;height:34px;border:1px solid var(--line);background:var(--white);border-radius:6px;font-size:18px;cursor:pointer;color:var(--black)}
+.qty output{min-width:28px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.db label{display:block;font-weight:600;margin:14px 0 6px}
+.db input,.db textarea{width:100%;border:1px solid var(--line);border-radius:6px;padding:10px;font:inherit;color:var(--black)}
+.db .acts{display:grid;gap:8px;margin-top:16px}
+.db .note{font-size:14px;color:var(--muted);margin-top:8px}
+.changes{margin:0;padding-left:20px;display:grid;gap:12px}
+.changes b{display:block}
+.changes span{color:var(--muted);font-size:15px}
+
+@media (max-width:1060px){
+  nav.main{display:none}
+  .call-top{margin-left:auto}
+  .zones{grid-template-columns:repeat(3,1fr)}
+  .products{grid-template-columns:repeat(3,1fr)}
+  .how{grid-template-columns:1fr 1fr}
+}
+@media (max-width:780px){
+  .hero .wrap,.contact{grid-template-columns:1fr}
+  .hero .wrap{padding-top:40px;padding-bottom:40px}
+  .products{grid-template-columns:1fr 1fr}
+  section.block{padding:48px 0}
+}
+@media (max-width:520px){
+  .zones{grid-template-columns:1fr 1fr}
+  .how{grid-template-columns:1fr}
+  .brand img{height:36px}
+  .call-top span{display:none}
+  .call-top{padding:10px 12px}
+  .prod .in{padding:10px}
+  .prod h3{font-size:15px}
+}
+</style>
+<style id="refero-theme">
+/* fonts: family=Inter:wght@300;400 */
+/* Estilo Refero: ON.energy, "high-voltage caution yellow on midnight steel". Secciones a sangre que alternan negro, amarillo de precaución y blanco; titulares en peso 300 con tracking cerrado; sin sombras ni degradados; radios utilitarios de 6 y 9px. */
+:root{
+  --red:#C8102E; --red-dark:#9E0C24; --black:#000000; --hazard:#FFF313;
+  --grey:#EEEEEE; --white:#FFFFFF; --muted:#4B4B4B; --line:#D9D9D9; --r:9px;
+  --cond:"Inter",system-ui,sans-serif; --sans:"Inter",system-ui,sans-serif;
+}
+body{font-weight:400}
+h1,h2,h3{font-weight:300!important;letter-spacing:-.04em;text-transform:none!important}
+.btn{border-radius:6px;font-weight:400}
+.btn-red{background:var(--hazard);color:#000}
+.btn-red:hover{background:#E6DA00}
+.btn-light{border-color:#EEEEEE}
+.hazard{display:none}
+header.top{background:#000;border-bottom:1px solid #333}
+header.top nav.main a{color:#EEEEEE}
+header.top nav.main a:hover{background:#333}
+.brand img{background:#fff;border-radius:6px;padding:2px 6px}
+.hero{background:#000}
+.hero h1{font-size:clamp(42px,6.4vw,84px)!important}
+.stats div{border-left-color:var(--hazard)}
+.stats b{font-weight:300}
+.sectors{background:var(--hazard);color:#000}
+.sectors b{font-weight:400}
+section.block{padding:96px 0}
+section.alt{background:#EEEEEE}
+.zones button{border-radius:9px;border-width:1px}
+.zones button[aria-pressed="true"]{border-color:#000;background:var(--hazard)}
+.zones b{font-weight:400}
+.prod{border-radius:9px}
+.prod .ph img{border-radius:16px}
+.prod .cat{color:#000;font-weight:400}
+.prod .add .btn{background:#000;color:#fff}
+.prod .add .btn[aria-pressed="true"]{background:var(--hazard);color:#000;border-color:var(--hazard)}
+.how div{border-radius:9px;border:0}
+.how b{font-weight:400}
+.special{border-radius:24px;background:#000}
+.special h3{font-weight:300!important}
+footer{background:#000}
+.qbar{background:#000;border-radius:9px}
+.qbar .count b{color:var(--hazard)}
+.dh h2{text-transform:none}
+dialog{border-radius:9px}
+</style>
+</head>
+<body>
+
+<div class="proposal" role="note">
+  <div class="wrap">
+    <span>Vista previa de rediseño propuesta para Krilo Seguridad Industrial. No es el sitio oficial.</span>
+    <button type="button" id="openChanges">Ver qué mejoramos</button>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="https://www.krilo.com.mx/wp/wp-content/uploads/2024/11/KRILO-Logo-300.png" alt="Krilo Seguridad Industrial" height="46"></a>
+    <nav class="main" aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#comprar">Cómo comprar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-red call-top" href="tel:+528999550928" aria-label="Llamar al 899 955 0928">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span>899 955 0928</span>
+    </a>
+  </div>
+  <div class="hazard" aria-hidden="true"></div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Equipo de protección personal para tu planta</h1>
+      <p class="lead">Arneses, calzado dieléctrico, cascos, protección facial, ropa antiestática y señalización vial. Mayoreo y menudeo, con factura y envío local sin costo.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="#catalogo">Armar mi cotización</a>
+        <a class="btn btn-light" href="https://wa.me/528993295560?text=Hola%2C%20quiero%20cotizar%20equipo%20de%20seguridad" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div><b>+25</b><span>años de experiencia</span></div>
+      <div><b>+500</b><span>clientes recurrentes</span></div>
+      <div><b>+10,000</b><span>artículos en inventario</span></div>
+    </div>
+  </div>
+</section>
+<div class="sectors">
+  <div class="wrap"><b>Atendemos a</b><span>Industria petrolera</span><span>Maquiladoras</span><span>Comercios</span><span>Residencial</span></div>
+</div>
+
+<section class="block" id="catalogo">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Catálogo</h2>
+      <p>Elige la zona que necesitas proteger, agrega productos a tu lista y mándala para recibir precio.</p>
+    </div>
+    <div class="zones" id="zones" role="group" aria-label="Categorías"></div>
+    <div class="bar">
+      <p id="shown" aria-live="polite"></p>
+      <button class="btn btn-line" type="button" id="allBtn">Ver todo</button>
+    </div>
+    <div class="products" id="products"></div>
+    <p class="more">Estos son algunos de los 225 productos del catálogo. ¿No encuentras lo que buscas? Agrégalo como comentario en tu cotización.</p>
+  </div>
+</section>
+
+<section class="block alt" id="comprar">
+  <div class="wrap">
+    <div class="sec-head"><h2>Cómo comprar</h2></div>
+    <div class="how">
+      <div><b>Arma tu lista</b><span>Agrega productos y cantidades desde el catálogo.</span></div>
+      <div><b>Recibe tu cotización</b><span>Precios competitivos de mayoreo y menudeo, con factura.</span></div>
+      <div><b>Paga seguro</b><span>Te damos distintas opciones de pago y transferencia.</span></div>
+      <div><b>Recibe el mismo día</b><span>La mayoría de los pedidos sale el mismo día del pago. Envío local sin costo (aplican restricciones) y paquetería a toda la República.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contacto">
+  <div class="wrap contact">
+    <div>
+      <div class="sec-head" style="margin-bottom:20px"><h2>Contacto</h2></div>
+      <dl>
+        <div><dt>Dirección</dt><dd>Río Purificación 1101-D, col. Revolución Obrera, Reynosa, Tamaulipas. <a href="https://www.google.com/maps/search/?api=1&query=Rio+Purificacion+1101+Revolucion+Obrera+Reynosa" target="_blank" rel="noopener">Cómo llegar</a></dd></div>
+        <div><dt>Atención a clientes y ventas</dt><dd><a href="tel:+528999550928">899 955 0928</a><br><a href="tel:+528999550938">899 955 0938</a><br><a href="tel:+528999558006">899 955 8006</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/528993295560" target="_blank" rel="noopener">899 329 5560</a></dd></div>
+        <div><dt>Correo</dt><dd><a href="mailto:cotizacion@krilo.com.mx">cotizacion@krilo.com.mx</a></dd></div>
+        <div><dt>Horario</dt><dd><div class="hours"><b>Lunes a viernes</b><span>8:00 a 18:00</span><b>Sábado</b><span>9:00 a 13:00</span></div></dd></div>
+      </dl>
+    </div>
+    <div class="special">
+      <h3>¿Requerimiento especializado?</h3>
+      <p>Nuestro personal te asesora con lo que tu empresa necesita, aunque no esté en el catálogo en línea. Somos distribuidores de las mejores marcas industriales y siempre tenemos amplio stock.</p>
+      <div><a class="btn btn-red" href="https://wa.me/528993295560?text=Hola%2C%20tengo%20un%20requerimiento%20de%20seguridad%20industrial%20especializado" target="_blank" rel="noopener">Pedir asesoría</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Krilo Seguridad Industrial. Empresa 100% mexicana. Reynosa, Tamaulipas.</span>
+    <a href="https://www.facebook.com/profile.php?id=100087443697042" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</footer>
+
+<div class="qbar" id="qbar" aria-live="polite">
+  <div class="count"><b id="qCount">0</b> <span id="qLabel">productos en tu cotización</span></div>
+  <button class="btn btn-red" type="button" id="openQuote">Revisar y enviar</button>
+</div>
+
+<dialog id="quoteDlg" aria-labelledby="qT">
+  <div class="dh"><h2 id="qT">Tu cotización</h2><button class="x" type="button" data-close aria-label="Cerrar">×</button></div>
+  <div class="db">
+    <ul class="qlist" id="qList"></ul>
+    <label for="qCompany">Empresa</label>
+    <input id="qCompany" autocomplete="organization">
+    <label for="qNotes">Tallas, colores o productos que no encontraste</label>
+    <textarea id="qNotes" rows="3" placeholder="Ej. botas talla 27 y 28; necesito factura"></textarea>
+    <div class="acts">
+      <a class="btn btn-wa" id="sendWa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+      <a class="btn btn-line" id="sendMail" href="#">Enviar por correo</a>
+    </div>
+    <p class="note">Te respondemos con precios de mayoreo o menudeo según la cantidad.</p>
+  </div>
+</dialog>
+
+<dialog id="changes" aria-labelledby="cT">
+  <div class="dh"><h2 id="cT">Qué mejoramos</h2><button class="x" type="button" data-close aria-label="Cerrar">×</button></div>
+  <div class="db">
+    <ol class="changes">
+      <li><b>El nombre bien escrito</b><span>El sitio dice "Kirlo" en cuatro lugares, incluido el aviso de derechos: "© 2024 Kirlo Seguridad Industrial".</span></li>
+      <li><b>Lista de cotización</b><span>Hoy hay que pedir producto por producto. Aquí el comprador arma su pedido con cantidades y lo manda completo por WhatsApp o correo.</span></li>
+      <li><b>Teléfonos que marcan</b><span>Tres enlaces de teléfono están escritos como "tel:. +52…" y no funcionan. Además el sitio tiene dos WhatsApp distintos.</span></li>
+      <li><b>Horario sin contradicciones</b><span>Un texto dice "Lunes a Viernes de 8:00 a 18:00 y los Viernes de 9:00 a 13:00"; otro dice "Lun – Vie 0 8:00".</span></li>
+      <li><b>Dirección limpia</b><span>El sitio vive en krilo.com.mx/wp/. Aquí la tienda queda en krilo.com.mx, más fácil de compartir y mejor para Google.</span></li>
+      <li><b>Productos distinguibles</b><span>Cinco botas distintas se llaman igual: "Bota - Calzado Dieléctrico con Puntera de Protección". Aquí cada una muestra su modelo.</span></li>
+      <li><b>Sin páginas vacías</b><span>La página "Ofertas" del menú no tiene ningún producto.</span></li>
+    </ol>
+  </div>
+</dialog>
+
+<script>
+const IMG = "https://www.krilo.com.mx/wp/wp-content/uploads/";
+const WA = "528993295560";
+// Categorías de su tienda, presentadas por zona del cuerpo
+const ZONES = [
+  ["altura", "Protección de altura", "Arneses y líneas", '<path d="M24 6v8M14 14h20l-4 26H18z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="26" r="4" fill="currentColor"/>'],
+  ["cabeza", "Protección de cabeza", "Cascos y barboquejos", '<path d="M8 30a16 16 0 0 1 32 0z" fill="currentColor"/><rect x="5" y="30" width="38" height="5" rx="2" fill="currentColor"/>'],
+  ["facial", "Protección facial", "Caretas y adaptadores", '<rect x="12" y="8" width="24" height="32" rx="10" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 22h24" stroke="currentColor" stroke-width="3"/>'],
+  ["antiestatico", "Antiestático", "Batas para áreas ESD", '<path d="M26 4 12 26h10l-4 18 18-26H26z" fill="currentColor"/>'],
+  ["botas", "Calzado de seguridad", "Botas dieléctricas", '<path d="M10 8h12v18l16 6v8H10z" fill="currentColor"/>'],
+  ["vialidad", "Vialidad", "Banderines y señalización", '<path d="M10 6v38" stroke="currentColor" stroke-width="3"/><path d="M12 8h26l-6 9 6 9H12z" fill="currentColor"/>']
+];
+// Productos reales de su catálogo [zona, nombre, modelo, imagen]
+const P = [
+  ["altura","Arnés de cuerpo completo con anillo D en espalda, pecho y costados","FT-SS-10AEDPDECO","2025/02/FT-SS-10AEDPDECO-300x300.jpg"],
+  ["altura","Arnés de cuerpo completo dieléctrico con anillo D en espalda","SS-10ANKDIEL","2025/02/SS-10ANKDIEL-300x300.jpg"],
+  ["altura","Amortiguador con doble banda","JYR-AM2C1","2025/02/JYR-AM2C1-1M83CM-300x300.jpg"],
+  ["altura","Banda de posicionamiento","JYR-20CVN1","2025/02/JYR-20CVN1-1M83CM-300x300.jpg"],
+  ["cabeza","Barboquejo para casco de 4 puntos con mentón","ECO-20004P","2025/02/BARBIQUEJO-4-PUNTOS-ECO-20004P-300x300.jpg"],
+  ["cabeza","Barboquejo elástico con mentón","WW-2000","2025/02/BARBIQUEJO-CON-MENTON-WW-2000-300x300.jpg"],
+  ["facial","Protector facial adaptable a casco","WW-1118","2025/02/PROTECTOR-FACIAL-ADAPTABLE-A-CASCO-WW-1118-300x300.jpg"],
+  ["antiestatico","Bata antiestática","STK-5000","2024/11/Bata-Anti-Estatica-STK-5000-300x300.jpg"],
+  ["antiestatico","Bata antiestática","STK-4700AZ","2024/11/Bata-Anti-Estatica-STK-4700AZ-1-300x300.jpg"],
+  ["botas","Bota dieléctrica con puntera de protección","9-985KP22","2024/11/9-985KP22-D-P-OLEO-1-300x300.jpg"],
+  ["botas","Bota dieléctrica con puntera de protección","R67P01","2024/11/FT.-1253-6-R67P01-D-DD-PTARZAN-300x300.jpg"],
+  ["vialidad","Banderín de malla con reflejante","ECO-1028CR","2025/03/BANDERIN-MALLA-ECO-1028CR-300x300.jpg"],
+  ["vialidad","Banderín para tractocamión","SR-1156K","2025/03/BANDERIN-TRAILER-SR-1156K-300x300.jpg"]
+];
+const zoneName = k => ZONES.find(z => z[0] === k)[1];
+const quote = new Map();
+let zone = "";
+
+document.getElementById("zones").innerHTML = ZONES.map(([k, n, d, svg]) =>
+  `<button type="button" data-zone="${k}" aria-pressed="false"><svg viewBox="0 0 48 48" aria-hidden="true">${svg}</svg><b>${n}</b><span>${d}</span></button>`).join("");
+
+function renderProducts(){
+  const list = P.map((p, i) => [p, i]).filter(([p]) => !zone || p[0] === zone);
+  document.getElementById("products").innerHTML = list.map(([[z, n, sku, img], i]) => `
+    <article class="prod">
+      <div class="ph"><img src="${IMG + img}" alt="${n} modelo ${sku}" loading="lazy" width="300" height="300"></div>
+      <div class="in">
+        <span class="cat">${zoneName(z)}</span>
+        <h3>${n}</h3>
+        <span class="sku">Modelo ${sku}</span>
+        <div class="add"><button class="btn btn-red" type="button" data-add="${i}" aria-pressed="${quote.has(i)}">${quote.has(i) ? "En tu cotización ✓" : "Agregar a cotización"}</button></div>
+      </div>
+    </article>`).join("");
+  document.getElementById("shown").textContent = zone ? `${zoneName(zone)}: ${list.length} productos de muestra` : `${list.length} productos de muestra`;
+  document.querySelectorAll("#zones button").forEach(b => b.setAttribute("aria-pressed", b.dataset.zone === zone));
+}
+document.getElementById("zones").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  zone = zone === b.dataset.zone ? "" : b.dataset.zone; renderProducts();
+});
+document.getElementById("allBtn").addEventListener("click", () => { zone = ""; renderProducts(); });
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-add]"); if (!b) return;
+  const i = +b.dataset.add;
+  if (quote.has(i)) quote.delete(i); else quote.set(i, 1);
+  sync();
+});
+function message(){
+  const lines = [...quote].map(([i, q]) => `• ${q} × ${P[i][1]} (modelo ${P[i][2]})`);
+  const c = document.getElementById("qCompany").value.trim(), n = document.getElementById("qNotes").value.trim();
+  return ["Hola, quiero cotizar:", ...lines, c ? `Empresa: ${c}` : "", n ? `Comentarios: ${n}` : ""].filter(Boolean).join("\n");
+}
+function links(){
+  const m = message();
+  document.getElementById("sendWa").href = `https://wa.me/${WA}?text=${encodeURIComponent(m)}`;
+  document.getElementById("sendMail").href = `mailto:cotizacion@krilo.com.mx?subject=${encodeURIComponent("Solicitud de cotización")}&body=${encodeURIComponent(m)}`;
+}
+function sync(){
+  renderProducts();
+  const total = [...quote.values()].reduce((a, b) => a + b, 0);
+  document.getElementById("qCount").textContent = total;
+  document.getElementById("qLabel").textContent = total === 1 ? "producto en tu cotización" : "productos en tu cotización";
+  document.getElementById("qbar").classList.toggle("show", total > 0);
+  document.getElementById("qList").innerHTML = [...quote].map(([i, q]) => `<li>
+    <img src="${IMG + P[i][3]}" alt="">
+    <div class="nm">${P[i][1]}<br><span style="font-weight:400;color:var(--muted)">Modelo ${P[i][2]}</span></div>
+    <div class="qty"><button type="button" data-q="${i}" data-d="-1" aria-label="Quitar uno">−</button><output>${q}</output><button type="button" data-q="${i}" data-d="1" aria-label="Agregar uno">+</button></div>
+  </li>`).join("");
+  links();
+}
+document.getElementById("qList").addEventListener("click", e => {
+  const b = e.target.closest("[data-q]"); if (!b) return;
+  const i = +b.dataset.q, q = quote.get(i) + +b.dataset.d;
+  if (q < 1) quote.delete(i); else quote.set(i, q);
+  sync();
+  if (!quote.size) document.getElementById("quoteDlg").close();
+});
+["qCompany", "qNotes"].forEach(id => document.getElementById(id).addEventListener("input", links));
+document.getElementById("openQuote").addEventListener("click", () => document.getElementById("quoteDlg").showModal());
+document.getElementById("openChanges").addEventListener("click", () => document.getElementById("changes").showModal());
+document.querySelectorAll("[data-close]").forEach(b => b.addEventListener("click", () => b.closest("dialog").close()));
+document.querySelectorAll("dialog").forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+renderProducts();
+</script>
+</body>
+</html>
